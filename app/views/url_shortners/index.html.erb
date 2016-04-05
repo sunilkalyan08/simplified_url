@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Url Shortners</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Original url</th>
+      <th>Generated url</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @url_shortners.each do |url_shortner| %>
+      <tr>
+        <td><%= url_shortner.original_url %></td>
+        <td><a href="<%=url_shortner.original_url%>" target="_blank"><%= url_shortner.generated_url%></a></td>
+        <td><%= link_to 'Destroy', url_shortner, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Url shortner', new_url_shortner_path %>

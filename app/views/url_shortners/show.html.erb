@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Original url:</strong>
+  <%= @url_shortner.original_url %>
+</p>
+
+<p>
+  <strong>Generated url:</strong>
+  <%= @url_shortner.generated_url %>
+</p>
+
+<%= link_to 'Edit', edit_url_shortner_path(@url_shortner) %> |
+<%= link_to 'Back', url_shortners_path %>
