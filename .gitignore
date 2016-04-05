@@ -1,1 +1,8 @@
-.gitignore
+# Ignore log files and temporary files.
+/log/*
+!/log/.keep
+/tmp
+
+# Ignore files that were created during merge conflicts
+*.orig
+
